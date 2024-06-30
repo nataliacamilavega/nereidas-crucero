@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nereidas Cruceros</title>
+
+    <link rel="icon" href="assets/icon.png">
+
+<!--Hojas de estilo en cáscada-->
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="crear.css">
+
+<!--Iconos fontawesome-->    
+    <script src="https://kit.fontawesome.com/69ab8990bd.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+<body>
+    <div class="contenedor-body">
+
+        
+        <main>
+            <section class="iniciar-sesion">
+
+                <a href="index.html"><button type="submit" class="button-terciario volver"><i class="fa-solid fa-arrow-left"></i>Volver al inicio</button></a>
+
+
+
+                <h2>Crear cuenta</h2>
+
+                <form class="form-login-container">
+
+                    <div class="datos-uno mobile">
+                        <div class="textfield">
+                            <label for="nombre">Nombre
+                                <input type="text" id="nombre" name="nombre" required>
+                            </label>
+                        </div>  
+                        <div class="textfield">  
+                            <label for="apellido">Apellido
+                                <input type="text" id="apellido" name="apellido" required>
+                            </label>       
+                        </div>
+                    </div>  
+                    
+                    <div class="datos-uno mobile">
+                        <div class="textfield">
+                            <label for="pais">País de residencia
+                                <select name="pais" id="pais" required>
+
+                                    <option value="select" disabled selected>Seleccioná tu país</option>
+                                    <option value="argentina">Argentina</option>
+                                    <option value="uruguay">Uruguay</option>
+                                    <option value="bolivia">Bolivia</option>
+                                              <option value="paraguay">Paraguay</option>
+                                    <option value="chile">Chile</option>
+
+                                </select>
+                            </label>
+                        </div>
+                        <div class="textfield">  
+                            <label for="apellido">Fecha de cumpleaños
+                                <input type="date" id="apellido" name="apellido" required>
+                            </label>
+                        </div>
+                    </div>  
+
+                    <div class="textfield">
+                        <label for="correo">Correo electrónico
+                            <input type="email" id="correo" name="correo" required>
+                        </label>
+                    </div>
+
+                    <div class="textfield">
+                        <label for="pass">Crear contraseña
+                            <input type="password" id="pass" name="pass" required>
+                        </label>
+
+                        <p class="spec">Minimo 8 caracteres, 1 número y 1 una mayúscula.</p>
+
+                    </div>
+
+
+                    <div class="login-checkbox">
+                        <label for="recordar">
+                        <input type="checkbox" id="recordar" name="recordar" required>
+                        *Acepto los términos y condiciones de uso.</label>
+
+                        
+                    </div>
+
+                    <div class="login-buttons">
+                        <button type="submit" class="button-primario">Crear cuenta</button>
+                        
+                    
+    
+                    </div>
+                    
+                </form>
+
+                <a href="login.html" class="cuenta"><button type="submit" class="button-terciario volver">¿Ya tienes cuenta? Inicia sesión.
+                </button></a>
+
+
+
+
+            </section>
+        </main>
+        <footer class="footer-login">
+            
+            <section>
+                <p>© 2022 Nereidas Cruceros S.A. </p>
+            </section>
+            
+            <section class="login-option">
+                <p>Quienes somos</p>
+                <p class="barra">Privacidad</p>
+                <p>Informacion legal</p>
+
+            </section>
+
+        </footer>
+    </div>
+</body>
+</html>

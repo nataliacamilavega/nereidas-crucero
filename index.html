@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nereidas Cruceros</title>
+    
+    <link rel="icon" href="assets/icon.png">
+
+<!--Hojas de estilo en cáscada-->
+    <link rel="stylesheet" href="styles.css">
+
+<!--Iconos fontawesome-->    
+    <script src="https://kit.fontawesome.com/69ab8990bd.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+<body>
+<!--NAVIGATION BAR-->
+    <header>
+        <div class="nav-bar-container">
+            <nav>
+
+                <a href="#hero" class="logo-container">
+                    <img src="assets/logo.svg" alt="Nereidas" class="logo">
+                    <img src="assets/nereidas.svg" alt="Nereidas" class="nereidas">
+                </a>
+
+
+<!--MENU HAMBURGUESA-->
+
+
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                
+                <label for="menu-toggle" class="bars-container">
+                    <span></span><span></span><span></span>
+                </label>
+    
+                <ul class="menu-hamburguesa-container toggle">
+                    <li><a href="#destinos">Destinos</a><i class="fa-solid fa-chevron-right"></i></li>
+                    <li><a href="#barcos">Barcos</a><i class="fa-solid fa-chevron-right"></i></li>
+                    <li><a href="#servicios">Servicios</a><i class="fa-solid fa-chevron-right"></i></li>
+                    <li><a href="#ofertas">Ofertas</a><i class="fa-solid fa-chevron-right"></i></li>
+                    <li><a href="#contacto">Contacto</a><i class="fa-solid fa-chevron-right"></i></li>
+                </ul>
+                
+                <ul class="menu-button">
+                    <li><button class="button-login"><a href="login.html">Iniciar sesión</a></button></li>
+                    <li><button class="button-signin"><a href="crear.html">Crear cuenta</a></button></li>
+                </ul>
+
+                <div class="menu-user-icono">
+                    <a href="login.html"><i class="fa-solid fa-user"></i></a>
+                </div>
+            </nav>
+    
+        </div>
+    </header>
+
+
+<!--HERO SECTION-->
+
+    <main>
+        <section class="hero-container" id="hero">
+
+            <video src="assets/hero.mp4" class="hero-video" muted loop autoplay preload></video>
+                <div class="hero-title">
+
+                    <h1>Reservá tu crucero</h1>
+                    
+                    <h2>Navegá más allá del horizonte junto a nosotros</h2>
+
+                </div>
+        </section>
+
+
+<!--DESTINOS SECTION-->
+        <section class="destinos-container" id="destinos">
+            
+            <article class="destinos">
+
+            
+                <h2 class="titulo-secciones">Destinos</h2>
+
+                <div class="destinos-galeria-container">
+
+                    <div class="destino-tres-items">
+                    <!--Noruega-->
+                        
+                        <div class="destino-item noruega">
+                            <a href="">Noruega</a>
+                            <a href="">Mediterráneo</a>
+                        </div>
+
+                        <div class="destino-dos-items">
+                            <!--Japón-->    
+                                <div class="destino-item japon">
+                                    <a href="">Japón</a>
+                                </div>
+                            
+                            <!--Caribe-->
+                            
+                                <div class="destino-item caribe">
+                                    <a href="">Caribe</a>       
+                                </div>
+                        </div>
+                    </div>    
+
+                    <!--Mediterraneo-->
+                    <div class="destino-item mediterraneo">
+                        <a href="">Mediterráneo</a>
+                        <a href="">Noruega</a>
+                    </div>
+
+                </div>
+
+            </article>
+        </section>
+
+<!--BARCOS SECTION-->
+
+        <section class="barcos-container" id="barcos">
+            <h2 class="titulo-secciones">Barcos</h2>
+
+        <!--Ovacion-->    
+            <article class="barco-item-container">
+
+                <div class="barco-image ovacion"></div>
+
+                <div class="barco-contenido">
+                    <div class="barco-descripcion">
+                        <h3>Ovación</h3>
+                        <p>Un homenaje al teatro y las orquestas. El espectáculo y las ovaciones nunca faltarán a bordo de este barco: tanto por las noches como a la luz del sol. 
+                        </p>    
+                        <h4>Subí a bordo de Ovación..</h4>    
+                            
+                    </div>
+
+                    <div class="barco-buttons">
+                        <button class="button-primario">Reservar</button>
+                        <button class="button-secundario">Ver barco</button>
+                    </div>
+                </div>
+            </article>
+
+        <!--Cambalache-->    
+            <article class="barco-item-container excepcion-barco">
+
+                <div class="barco-image cambalache"></div>
+
+                <div class="barco-contenido">
+                    <div class="barco-descripcion">
+                        <h3>Cambalache</h3>
+                        <p>El crucero de la diversión. Todos los días actividades, juegos y espectaculos. Ideal para familias y pasar unas vacaciones súper divertidas. 
+                        </p>    
+                            <h4>Subí a bordo de Cambalache.</h4>
+                            
+                    </div>
+
+                    <div class="barco-buttons">
+                        <button class="button-primario">Reservar</button>
+                        <button class="button-secundario">Ver barco</button>
+                    </div>
+                </div>
+
+            </article>
+
+        <!--Vibras del Océano-->    
+            <article class="barco-item-container">
+
+                <div class="barco-image vibras"></div>
+
+                <div class="barco-contenido">
+                    <div class="barco-descripcion">
+                        <h3>Vibras del Océano</h3>
+                        <p>Disfruta de un relajante crucero con servicios de spa exclusivos y actividades dedicadas a la meditación y el encuentro con uno mismo.
+                        </p>   
+                            
+                        <h4>Subí a bordo de Vibras del Océano.</h4>
+                    </div>
+
+                    <div class="barco-buttons">
+                        <button class="button-primario">Reservar</button>
+                        <button class="button-secundario">Ver barco</button>
+                    </div>
+                </div>
+
+            </article>
+
+
+
+
+
+
+
+
+        </section>
+
+<!--SERVICIOS SECTION-->
+
+        <section class="servicios-container" id="servicios">
+
+            <h2 class="titulo-secciones">Servicios</h2>
+
+        <!--ESPECTACULOS-->
+            <div class="coleccion-cards">
+                <article class="servicio-card-container">
+                    <div class="servicio-card">
+                        <div class="servicio-imagen espectaculo">
+                            <h3>Espectáculos</h3>
+                        </div>
+
+                        <div class="servicios-descripcion">
+        
+                            <h3>Espectáculos y entretenimiento</h3>
+                            <p>Hay muchos eventos divertidos a bordo. En el teatro verás obras clásicas como contemporáneas o espectáculos músicales. 
+                                También contamos con un concurso de talentos donde todos los pasajeros pueden participar con numerosos premios.
+                            </p>
+        
+                        </div>
+
+                        <button class="button-terciario">Ver más<i class="fa-solid fa-chevron-right"></i></button>
+
+                    </div>
+
+                    <!--Excursiones-->
+                </article>
+                <article class="servicio-card-container">
+                    <div class="servicio-card">
+                        <div class="servicio-imagen excursion  excepcion-servicio">
+                            <div class="flip-flop"></div>
+
+                            <h3>Excursiones</h3>
+                        </div>
+
+                        <div class="servicios-descripcion">
+        
+                            <h3>Excursiones</h3>
+                            <p>Elegí las excursiones que más te interesen, reservá y disfrutá de tus vacaciones.
+                                Desde excursiones personalizadas, guiías en tu idioma, pasar sin colas a museos todo a un precio accesible.                         
+                            </p>    
+                        </div>
+
+                        <button class="button-terciario">Ver más<i class="fa-solid fa-chevron-right"></i></button>
+
+                    </div>
+
+                </article>
+            
+
+        <!--resto-->
+                </article>
+                <article class="servicio-card-container">
+                    <div class="servicio-card">
+                        <div class="servicio-imagen resto">
+                            <h3>Restaurantes</h3>
+                            
+                        </div>
+
+                        <div class="servicios-descripcion">
+        
+                            <h3>Restaurantes</h3>
+                            <p>Disfruta de vinos, restaurantes temáticos y aperitivos. 
+                                De desayunar un crépe a almorzar sushi, de ahí a merendar deliciosos aperitivos y en la cena pizza preparada con masa madre. 
+                                Descubrí un nuevo mundo de sabores.   
+                            </p> 
+                        </div>
+
+                        <button class="button-terciario">Ver más<i class="fa-solid fa-chevron-right"></i></button>
+
+                    </div>
+
+                </article>
+            </div>
+
+
+
+        </section>
+
+    <!--OFERTAS SECTION-->
+
+        <section class="ofertas-container" id="ofertas">
+            <h2 class="titulo-secciones">Ofertas</h2>
+
+            <article class="ofertas-cards-container">
+    
+    
+        <!--Noruega-->
+                
+                <div class="ofertas-cards">
+
+                    <div class="oferta-destino-video">
+                        <video src="assets/oferta-noruega.mp4" muted loop autoplay></video>
+                        <div class="dias">
+                            <h4>7</h4>
+                            <p>Días</p>
+                        </div>
+                    </div>
+
+                    <div class="oferta-descripcion">
+
+                        <h3>Crucero por los fiordos noruegos</h3>
+
+                        <div class="oferta-precio">
+                            <p>A partir de</p>
+                            <h4>$300.000 por persona</h4>
+                        </div>
+                        <div class="oferta-datos">
+
+                            <a href="https://www.google.com/maps/place/Southampton,+Reino+Unido/@50.9138207,-1.4004929,12z/data=!4m2!3m1!1s0x48738957be152909:0xa78c5a6a4cda71f0" target="_blank"><i class="fa-solid fa-location-dot"></i> Salida en Suthampton, Inglaterra. </a>
+
+                            <a href=""><i class="fa-solid fa-ship"></i>Vibras del océano </a>
+
+                        </div>
+                        <button class="button-primario">Reservar</button>
+                    </div>
+                </div>
+
+
+
+        <!--Japon-->
+                
+                <div class="ofertas-cards">
+
+                    <div class="oferta-destino-video">
+
+                        <video src="assets/japon.mp4" muted loop autoplay></video>
+
+                        <div class="dias">
+                            <h4>4</h4>
+                            <p>Días</p>
+                        </div>
+                    </div>
+
+                    <div class="oferta-descripcion">
+
+                        <h3>Crucero por Japón</h3>
+
+                        <div class="oferta-precio">
+                            <p>A partir de</p>
+                            <h4>$400.000 por persona</h4>
+                        </div>
+                        <div class="oferta-datos">
+
+                            <a href="https://www.google.com/maps/place/Yokohama,+Prefectura+de+Kanagawa,+Jap%C3%B3n/@35.8905487,138.2189661,8.45z/data=!4m13!1m7!3m6!1s0x60185becbbb66509:0x69683f660285400!2sYokohama,+Prefectura+de+Kanagawa,+Jap%C3%B3n!3b1!8m2!3d35.4436739!4d139.6379639!3m4!1s0x60185becbbb66509:0x69683f660285400!8m2!3d35.4436739!4d139.6379639" target="blank"><i class="fa-solid fa-location-dot"></i> Salida en Yokohama, Japón </a>
+
+                            <a href=""><i class="fa-solid fa-ship"></i>Ovación</a>
+
+                        </div>
+                        <button class="button-primario">Reservar</button>
+                    </div>
+                </div>
+
+
+        <!--Meditarreneo-->
+                
+                <div class="ofertas-cards">
+
+                    <div class="oferta-destino-video">
+                        <video src="assets/napoles.mp4" muted loop autoplay></video>
+                        <div class="dias">
+                            <h4>15</h4>
+                            <p>Días</p>
+                        </div>
+                    </div>
+
+                    <div class="oferta-descripcion">
+
+                        <h3>Crucero por el mediterráneo</h3>
+
+                        <div class="oferta-precio">
+                            <p>A partir de</p>
+                            <h4>$400.000 por persona</h4>
+                        </div>
+                        <div class="oferta-datos">
+
+                            <a href="https://www.google.com.ar/maps/place/N%C3%A1poles,+Italia/@40.8537158,14.1729667,12z/data=!3m1!4b1!4m5!3m4!1s0x133b084f6a6c7e99:0x3df52cc13b78191d!8m2!3d40.8517983!4d14.26812" target="blank"><i class="fa-solid fa-location-dot"></i> Salida en Nápoles, Italia </a>
+
+                            <a href=""><i class="fa-solid fa-ship"></i>Cambalache</a>
+
+                        </div>
+                        <button class="button-primario">Reservar</button>
+                    </div>
+                </div>
+        <!--grecia-->
+                
+                <div class="ofertas-cards">
+
+                    <div class="oferta-destino-video">
+                        <video src="assets/grecia.mp4" muted loop autoplay></video>
+                        <div class="dias">
+                            <h4>5</h4>
+                            <p>Días</p>
+                        </div>
+                    </div>
+
+                    <div class="oferta-descripcion">
+
+                        <h3>Crucero por las islas griegas</h3>
+
+                        <div class="oferta-precio">
+                            <p>A partir de</p>
+                            <h4>$100.000 por persona</h4>
+                        </div>
+                        <div class="oferta-datos">
+
+                            <a href="https://www.google.com.ar/maps/place/N%C3%A1poles,+Italia/@40.8537158,14.1729667,12z/data=!3m1!4b1!4m5!3m4!1s0x133b084f6a6c7e99:0x3df52cc13b78191d!8m2!3d40.8517983!4d14.26812" target="blank"><i class="fa-solid fa-location-dot"></i> Salida en Santorini, Grecia </a>
+
+                            <a href=""><i class="fa-solid fa-ship"></i>Vibras del océano</a>
+
+                        </div>
+                        <button class="button-primario">Reservar</button>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </article>
+
+        </section>
+
+
+<!--SECTION CONTACTO-->
+
+        <section class="contacto-container" id="contacto">
+
+            <h2 class="titulo-secciones">Contacto</h2>
+
+            <article class="contacto-form-container">
+
+                <form>
+                    
+                    <div class="form-datos">
+                        
+                        <div class="datos-uno">
+                            <div class="textfield">
+                                <label for="nombre">Nombre
+                                    <input type="text" id="nombre" name="nombre" required>
+                                </label>
+                            </div>  
+                            <div class="textfield">  
+                                <label for="apellido">Apellido
+                                    <input type="text" id="apellido" name="apellido" required>
+                                </label>
+                            </div>
+                        </div>    
+                        
+                        <div class="textfield desktop">
+                            <label for="pais">País de residencia
+                                <select name="pais" id="pais" required>
+
+                                    <option value="select" disabled selected>Seleccioná tu país</option>
+                                    <option value="argentina">Argentina</option>
+                                    <option value="uruguay">Uruguay</option>
+                                    <option value="bolivia">Bolivia</option>
+                                    <option value="paraguay">Paraguay</option>
+                                    <option value="chile">Chile</option>
+
+                                </select>
+                            </label>        
+                        
+                
+                            <div class="textfield">
+                                <label for="correo">Correo electrónico
+                                    <input type="email" id="correo" name="correo" required>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="textfield mensaje">
+                        <label for="mensaje">Mensaje
+                            <textarea name="mensaje" id="mensaje" cols="30" rows="10" required></textarea>                        
+                        </label>
+                    </div>
+
+                    <button type="submit" class="button-primario" >Enviar</button>
+                </form>
+
+            </article>
+
+
+
+
+
+        </section>
+
+
+
+
+    </main>
+    <footer class="footer-index">
+       
+
+        <section class="footer-info">
+
+            <article class="info-columna-container">
+
+                <h4>La compañia<i class="fa-solid fa-angle-down"></i></h4>
+                
+                <ul>
+                    <li>Sobre Crucero</li>
+                    <li>Trabajá con nosotros</li>
+                    <li>Código de conducta</li>
+                    <li>Términos y condiciones</li>
+                    <li>Quienes somos</li>
+                    <li>Alertas de viaje</li>
+                </ul>
+
+            </article>
+            <article class="info-columna-container">
+
+                <h4>Prepará tu viaje<i class="fa-solid fa-angle-down"></i></h4>
+                
+                <ul>
+                    <li>Realizar un pago</li>
+                    <li>Derechos del pasajero</li>
+                    <li>Nuestras tarifas</li>
+                    <li>Equipaje</li>
+                    <li>Compras a bordo</li>
+                    <li>Accesibilidad</li>
+                    <li>Salud y bienestar</li>
+                    <li>Casamientos</li>
+                </ul>
+
+            </article>
+            <article class="info-columna-container">
+
+                <h4>Información importante<i class="fa-solid fa-angle-down"></i></h4>
+                
+                <ul>
+                    <li>Preguntas frecuentes</li>
+                    <li>Requisitos sanitarios para viajar</li>
+                    <li>Botón de arrepentimiento</li>
+
+                </ul>
+
+            </article>
+            <article class="info-columna-container excepcion-descarga">
+
+                <h4>Descargá la aplicación</h4>
+                
+                <div class="download">
+                    <div class="apple"></div>
+                    <div class="playstore"></div>
+                </div>
+
+            </article>
+
+        </section>
+
+        <section class="footer-copy-redes">
+
+            <article class="redes">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-tiktok"></i>
+
+            </article>
+            <article class="copy">
+                <p>© 2022 Nereidas Cruceros S.A. </p>
+            </article>
+
+
+        </section>
+    </footer>
+</body>
+</html>

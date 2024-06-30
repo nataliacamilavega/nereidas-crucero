@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+/* FUENTES
+font-family: 'Inter', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Source Serif Pro', serif;
+*/
+
+:root {
+
+   /*COLORES*/
+   
+    --blue: #00168A;
+    --aqua: #48CAC5;
+    --dark: #000000;
+    --white: #ffffff;
+    --lightblue: #C1DAFF; 
+
+
+    /*FUENTE*/
+    
+    --thin: 100;
+    --extralight: 200;
+    --light: 300;
+    --regular: 400;
+    --medium: 500;
+    --semibold: 600;
+    --bold: 700;
+    --extrabold: 800;
+    --black: 900;
+}
+
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--blue);
+}
+
+
+
+.volver a {
+    display: flex;
+    gap: 8px;
+
+    justify-content: center;
+    align-items: center;
+    color: var(--aqua);
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    
+    background-image: url(assets/background.jpg);
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+
+    
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-body {
+
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction:column;
+
+    justify-content: space-around;
+    align-items: flex-start ;
+
+    padding: 16px 32px;
+
+    gap: 24px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+/*SECTOR INICIAR SESION*/
+
+.iniciar-sesion {
+    background-color: var(--white);
+    border-radius: 15px;
+
+    
+
+    flex: 1 1 550px;
+
+    padding: 16px 16px;
+
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+}
+
+section h2 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: var(--blue);
+    text-align: center;
+
+    text-decoration-line: underline;
+    text-underline-offset: 4px;
+
+    text-decoration-thickness: 10%;
+
+}
+
+/*CONTENEDOR FORM*/
+
+.form-login-container {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 16px;
+
+    width: 100%;
+}
+
+.form-login-container div {
+    width: 100%;
+}
+
+.login-buttons {
+    display: flex;
+    flex-direction: column;
+
+    
+    gap: 16px;
+}
+
+.login-buttons button {
+    height: 42px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-checkbox > label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.login-checkbox label {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.login-checkbox input{
+    width: 24px; 
+    height: 24px;
+    background-color: var(--aqua);
+
+    cursor: pointer;
+}
+
+/*FOOTER*/
+
+.footer-login {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 8px;
+
+    color: white;
+
+    width: 100%;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-login section {
+    display: flex;
+    flex: 1 1 200px;
+    gap: 16px;
+
+    justify-content: center;
+
+    
+}
+
+.barra {
+    border-left: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+
+    padding: 0 8px;
+}
+
+
+.login-option p {
+    
+    display: flex;
+
+    align-items: center;
+
+    text-align: center;
+
+    cursor: pointer;
+}
+
+section p{
+    cursor: pointer;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: var(--medium);
+    font-size: 16px;
+    line-height: 19px;
+
+    
+}
+
+.spec {
+    font-size: 12px;
+}

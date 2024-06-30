@@ -1,0 +1,1866 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+/* FUENTES
+font-family: 'Inter', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Source Serif Pro', serif;
+*/
+
+:root {
+
+   /*COLORES*/
+   
+    --blue: #00168A;
+    --aqua: #48CAC5;
+    --dark: #000000;
+    --white: #ffffff;
+    --lightblue: #C1DAFF; 
+
+
+    /*FUENTE*/
+    
+    --thin: 100;
+    --extralight: 200;
+    --light: 300;
+    --regular: 400;
+    --medium: 500;
+    --semibold: 600;
+    --bold: 700;
+    --extrabold: 800;
+    --black: 900;
+}
+
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+}
+
+html {   
+    scroll-behavior: smooth;   scroll-padding-top: 100px; 
+
+}
+
+
+
+/*HEADER*/
+
+
+.nav-bar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+
+
+    padding: 10px 26px;
+
+
+    height: 75px;
+    width: 100%;
+
+    position: fixed;
+
+    z-index: 10000;
+
+    background-color: var(--white);
+}
+
+/*LOGO*/ 
+
+.logo-container {
+    display: flex;
+    flex-flow: column;
+
+    align-items: center;
+    justify-content: center;
+
+    order: 2;
+
+    height: 56px;
+
+   
+
+    box-sizing: border-box;
+}
+
+.logo {
+    height: 40px;
+    flex: 1 1 100%;
+
+}
+.nereidas {
+    height: 25%;
+    flex: 1 1 100%;
+}
+
+/*NAV*/
+nav {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    font-family: 'Inter', sans-serif;
+
+    gap: 10px;
+}
+/*CUENTA*/
+
+.menu-user-icono {
+    order: 3;
+}
+
+.menu-hamburguesa-icono, .menu-user-icono a{
+    font-size: 32px;
+    color: var(--blue);
+
+    cursor: pointer;
+}
+
+.menu-user-icono:active {
+    color: #00168A;
+}
+
+
+.toggle {
+
+    
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+    height: 100vh;
+    width: 70vw;
+
+    position: fixed;
+
+    top: 70px;
+    left: -100%;
+    
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.7s ease;
+
+    z-index: 10;
+
+}
+
+
+
+.toggle li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: var(--blue);
+
+
+    
+    border-bottom: 1px solid black;
+    margin: 0 10px;
+
+    cursor: pointer;
+
+    transition: all  0.5s ease;
+    border-bottom: #48cac600;
+}
+
+.toggle li a {
+    text-decoration: none;
+    color: var(--blue);
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+
+.toggle li:hover > a, .toggle li:hover > i {
+    color: var(--aqua);
+    transition: color 0.5s ease;
+
+}
+
+.toggle li:active > a, .toggle li:active > i {
+    color: var(--aqua);
+    transition: color 0.5s ease;
+
+}
+
+.menu-toggle:checked ~ .toggle {
+    top: 70px;
+    left: 0;
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+/* SPAN BARRAS MENÚ HAMBURGUESA ESTILADO Y ANIMACIÓN*/ 
+
+.bars-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 20px;
+    width: 25px;
+    
+    gap: 3px;
+    position: relative;
+    transition: all 0.4s linear;
+
+    cursor: pointer;
+
+}
+
+.bars-container span {
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: var(--blue);
+}
+ 
+.bars-container span:first-child {
+    transition: all 0.4s linear;
+}
+  
+  .bars-container span:last-child {
+    transition: all 0.4s linear;
+}
+
+#menu-toggle:checked + .bars-container > span:first-child {
+    position: absolute;
+    margin-top: 8px;
+    transform: rotate(135deg);
+    transition: all 0.4s linear;
+}
+  
+#menu-toggle:checked + .bars-container > span:nth-child(2) {
+    opacity: 0;
+}
+  
+#menu-toggle:checked + .bars-container > span:last-child {
+    margin-bottom: 8px;
+    transform: rotate(-135deg);
+    transition: all 0.4s linear;
+}
+  
+#menu-toggle {
+    display: none;
+}
+
+
+
+/*BOTONES DE DESKTOP*/
+
+.menu-button {
+    display: none;
+}
+
+/*MAIN*/
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    gap: 54px;
+}
+
+
+/*HERO SECTION*/
+
+.hero-section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+
+.hero-video {
+    height: calc(100vh + 75px);
+    width: 100%;
+
+    object-fit: cover;
+
+
+    
+
+    
+}
+
+.hero-title {
+    position: absolute;
+    top: 80%;
+    left: 0;
+
+    padding: 0 16px;
+
+    font-family: 'Inter';
+    color: var(--white);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.hero-title > h1 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: var(--black);
+    font-size: 32px;
+    line-height: 29px;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+.hero-title > h2 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: var(--regular);
+    font-size: 24px;
+    line-height: 34px;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+
+    width: 230px;
+}
+
+
+/*-----------------------------------------------------------------*/
+
+/*CLASES COMPARTIDAS: TITULOS H2 SECTION*/
+
+.destinos-container, .barcos-container, 
+.servicios-container, .ofertas-container, .contacto-container {
+    padding: 0 32px;
+}
+
+.titulo-secciones {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: var(--semibold);
+    font-size: 28px;
+    line-height: 29px;
+
+    color: var(--blue);
+
+    height: 30px;
+
+    text-align: start;
+}
+
+.button-primario {
+    background-color: var(--blue);
+    border-radius: 15px;
+
+    color: var(--white);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: var(--regular);
+    font-size: 16px;
+    line-height: 19px;
+
+    padding: 12px;
+
+    border: none;
+
+    
+    transition: all 0.5s ease-in;
+
+}
+.button-secundario {
+    background-color: var(--white);
+    border-radius: 15px;
+
+    color: var(--blue);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: var(--regular);
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    padding: 12px;
+
+    border: solid 2px var(--blue);
+    
+    transition: all 0.5s ease-in;
+
+    
+
+}
+.button-terciario {
+    text-align:left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+
+    border-bottom: solid 3px rgba(255, 255, 255, 0);
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: var(--medium);
+    font-size: 16px;
+    line-height: 19px;
+
+    color: var(--aqua);
+
+    width: fit-content;
+
+    transition: all 0.5s ease-in;
+
+}
+.button-terciario:hover {
+    transition: all 0.5s ease-in;
+
+    border-bottom: solid 3px var(--aqua);
+    cursor: pointer;
+}
+
+
+.button-primario:hover {
+    transition: background-color 0.3s ease-in;
+    background-color: var(--aqua);
+    cursor: pointer;
+}
+
+.button-secundario:hover {
+    transition: box-shadow 0.3s ease-in;
+    box-shadow: inset -4px -4px 4px rgba(54, 134, 255, 0.25), inset 4px 4px 4px rgba(54, 134, 255, 0.25);
+
+    cursor: pointer;
+}
+
+/*inputs diseño**/
+
+
+.textfield {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+.textfield label {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: var(--medium);
+    font-size: 16px;
+    line-height: 24px;
+
+    color: var(--blue);
+
+    width: 100%;
+    border: none;
+
+    transition: all 0.2s ease;
+
+}
+
+.textfield input {
+
+    border-radius: 4px;
+    height: 42px;
+    width: 100%;
+    outline: solid 2px var(--blue);
+
+    padding: 8px ;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: var(--regular);
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+
+    transition: all 0.2s ease;
+
+
+}
+.textfield textarea {
+    width: 100%;
+
+    border-radius: 4px;
+    resize: none;
+    outline: solid 2px var(--blue);
+
+    padding: 8px ;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: var(--regular);
+    font-size: 16px;
+    line-height: 24px;
+
+    border: none;
+
+    transition: all 0.2s ease;
+
+}
+
+.textfield select {
+    color: var(--blue);
+    height: 42px;
+    width: 100%;
+    outline: solid 2px var(--blue);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: var(--regular);
+    font-size: 16px;
+    line-height: 24px;
+
+    border-radius: 4px;
+    border: none;
+
+    transition: all 0.2s ease;
+
+}
+
+.select option {
+    width: 100%;
+
+    transition: all 0.2s ease;
+
+}
+
+.textfield input:focus, .textfield select:focus, .textfield textarea:focus {
+    transition: all 0.2s ease;
+    outline: solid 3px var(--aqua);
+
+}
+
+label:focus-within {
+    color: var(--aqua); 
+    transition: all 0.2s ease;
+
+
+}
+
+
+/*------------------------------------------------------------------*/
+/*DESTINOS SECTION*/
+
+.destinos-container {
+    display: flex;
+
+    width: 100%;
+
+
+    justify-content: center;
+    align-items: center;
+}
+
+.destinos {
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+
+
+    gap: 16px;
+
+    height: calc (100vh - 75px);
+}
+
+
+
+/*contenedores destintos*/
+
+.destinos-galeria-container {
+    display: flex;
+    flex-flow: column;
+
+    width: 100%;
+
+    height: 75vh;
+
+    gap: 10px;
+}
+
+.destino-tres-items {
+    height: 75%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    gap: 10px;
+}
+
+
+.destino-dos-items {
+    height: 100%;
+    flex-basis: 50%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+/*cards fotos destinos*/ 
+
+.noruega {
+    background-image: url(assets/noruega.jpg);
+
+    height: 100%;
+    flex-basis: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.japon {
+    background-image: url(assets/japon.jpg);
+
+    height: 25%;
+    flex-basis: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.caribe {
+    background-image: url(assets/caribe.jpg);
+    height: 25%;
+    flex-basis: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.mediterraneo {
+    background-image: url(assets/mediterraneo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+
+    height: 25%;
+}
+
+.destino-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.destino-item a {
+    text-decoration: none;
+    font-family: 'Inter';
+    font-style: normal;
+
+    font-weight: var(--black);
+    font-size: 24px;
+    line-height: 29px;
+
+    color: var(--white);
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.noruega a:last-child, .mediterraneo a:last-child {
+    display: none;
+}
+
+/*TEXTOS BEFORE CARDS DESTINOS*/
+/*
+.mediterraneo::before {
+    content: "Mediterráneo";
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: var(--black);
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--white);
+
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.japon::before {
+    content: "Japón";
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: var(--black);
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--white);
+
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.caribe::before {
+    content: "Caribe";
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: var(--black);
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--white);
+
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.noruega::before {
+    content: "Noruega";
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: var(--black);
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--white);
+
+    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.471);
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+*/
+
+
+
+/*SECTION BARCOS*/
+
+.ovacion {
+    background-image: url(assets/ovacion.jpg);
+
+}
+
+.cambalache {
+    background-image: url(assets/cambalache.jpg);
+
+}
+
+.vibras {
+    background-image: url(assets/vibras.jpg);
+
+}
+.barcos-container {
+    display: flex;
+    flex-direction: column;
+
+
+    width: 100%;
+
+
+    justify-content: center;
+
+    gap: 16px;
+}
+
+
+
+/*CARD BARCOS*/
+
+
+.barco-item-container {
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 16px;
+}
+
+
+.barco-image {
+    width: 100%;
+    height: 35vh;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    
+}
+
+.barco-contenido {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+.barco-descripcion {
+    display: flex;
+    flex-direction: column;
+    
+
+    gap: 16px;
+}
+
+.barco-descripcion h3{
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: var(--semibold);
+    font-size: 20px;
+    line-height: 24px;
+    text-decoration: underline solid 3px;
+
+    text-underline-offset: 3px;
+    color: var(--blue);
+
+}
+
+.barco-descripcion p{
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: var(--regular);
+    font-size: 14px;
+    line-height: 17px;
+
+    color: var(--dark);
+
+}
+
+.barco-descripcion h4{
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: var(--medium);
+    font-size: 14px;
+    line-height: 17px;
+
+    color: var(--dark);
+
+}
+
+.barco-buttons {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 16px;
+
+    width: 100%;
+}
+
+.barco-buttons button {
+    width: 50%;
+}
+
+/*SERVICIOS SECTION*/
+
+
+
+.espectaculo {
+    background-image: url(assets/show.jpg);
+}
+.excursion {
+    background-image: url(assets/excursion.jpg);
+}
+.resto {
+    background-image: url(assets/resto.jpg);
+}
+
+.servicios-container {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+
+    justify-content: center;
+
+    gap: 16px;
+}
+
+/*CARD SERVICIO*/
+
+.servicio-card {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+    position: relative;
+}
+
+/*imagen-video*/
+
+.servicio-imagen {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 35vh;
+}
+
+.servicio-imagen h3 {
+    height: 100%;
+    width: 55%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+
+    padding-left: 10px;
+
+
+    color: var(--white);
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+
+    backdrop-filter: blur(5px);
+
+    cursor: default;
+
+    box-sizing: border-box;
+}
+
+.coleccion-cards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    gap: 16px;
+}
+
+
+.excepcion-servicio {
+    display: flex;
+    justify-content: space-between;
+}
+
+.excepcion-servicio h3 {
+    padding-right: 12px;
+    text-align: right;
+
+}
+.excepcion-servicio div {
+    width: 50%;
+    height: 100%;
+    
+}
+
+.servicios-descripcion {
+    display: none;
+}
+
+
+
+
+/*OFERTAS SECTION*/ 
+
+.ofertas-container {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+
+    justify-content: center;
+
+    gap: 16px;
+}
+
+.ofertas-cards-container {
+    height: calc(486px + 32px);
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 8px;
+    
+
+}
+.ofertas-cards-container::-webkit-scrollbar {
+    height: 10px;
+    background-color: #ffffff;
+
+    border-radius: 3px;
+
+    
+}
+
+.ofertas-cards-container::-webkit-scrollbar-thumb {
+    height: 10px;
+    background-color: var(--aqua);
+
+    border-radius: 50px;
+    
+}
+
+
+
+
+.ofertas-cards {
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 0 0 320px;
+    height: 486px;
+
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 4px 4px 16px #C9D9E8;
+    
+    gap: 24px;
+
+    
+}
+
+
+.oferta-destino-video {
+    width: 100%;
+    height: 40%;
+    
+
+    position: relative
+}
+
+.oferta-destino-video > .dias {
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 8px 20px;
+
+    color: var(--dark);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: var(--semibold);
+    font-size: 20px;
+    line-height: 24px;
+
+    position: absolute;
+
+    background-color: rgba(255, 255, 255, 0.7);;
+    border-radius: 0px 15px 0px 0px;
+    backdrop-filter: blur(9px);
+
+}
+
+
+
+.oferta-destino-video video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    border-radius: 15px 15px 0 0;
+
+}
+
+
+
+.oferta-descripcion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+
+    padding: 0 16px;
+}
+
+.oferta-descripcion h3 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: var(--semibold);
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--dark);
+
+    height: 42px;
+}
+
+.oferta-precio p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: var(--regular);
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #000000;
+}
+
+.oferta-precio h4 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: var(--medium);
+    font-size: 20px;
+    line-height: 24px;
+
+    color: var(--dark);
+}
+
+.oferta-datos {
+    display: flex;
+    flex-direction: column;
+
+    gap:5px;
+
+
+}
+
+.oferta-datos a{
+    text-decoration: none;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: var(--medium);
+    font-size: 16px;
+    line-height: 19px;
+
+    color: var(--dark);
+
+    
+    display: flex;
+    
+    gap: 4px;
+}
+
+.oferta-datos a i {
+    width: 20px;
+    text-align: center;
+
+}
+
+.oferta-descripcion button {
+    width: 100%;
+    height: 42px
+}
+
+
+/*SECTION CONTACTO*/
+
+.contacto-container {
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+
+
+    width: 100%;
+}
+
+.form-datos {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+}
+
+.contacto-form-container form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+}
+
+
+.datos-uno {
+    display: flex;
+    flex-direction: row;
+
+    gap: 24px;
+
+    width: 100%;
+
+    justify-content: start;
+    align-items: center;
+}
+
+.datos-uno .textfield {
+    width: 50%;
+    
+}
+
+.mobile div:first-child {
+    width: 40%;
+}
+
+/*FOOTER*/
+
+.footer-index {
+    background-color:var(--lightblue);
+
+    padding: 16px 16px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    gap: 16px;
+}
+
+.info-columna-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    border-bottom: 1px solid rgba(0, 22, 138, 0.15);
+
+
+    height: 32px;
+
+}
+
+.excepcion-descarga {
+    border-bottom: none;
+
+    flex-direction: column;
+
+    height: auto;
+}
+.excepcion-descarga h4 {
+    height: 32px;
+}
+
+.download {
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    padding: 16px 16px;
+
+    gap: 16px;
+
+    
+}
+
+.download > div {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+
+    flex: 0 1 245px;
+
+    height: 48px;
+
+    border-radius: 15px;
+
+}
+
+.apple {
+    background-image: url(assets/apple.svg);
+
+}
+.playstore {
+    background-image: url(assets/playstore.svg);
+    
+}
+
+.info-columna-container ul{
+    display: none;
+    
+}
+.info-columna-container h4{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    
+    gap: 20px;
+
+    width: 100%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: var(--medium);
+    font-size: 20px;
+    line-height: 29px;
+
+    color: var(--blue);
+
+    cursor: pointer;
+
+}
+
+.footer-copy-redes {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 24px;
+
+
+    padding-top: 24px;
+}
+.copy {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: var(--regular);
+    font-size: 20px;
+    line-height: 29px;
+}
+
+.redes {
+    font-size: 32px;
+
+    display: flex;
+
+    gap: 24px;
+
+    cursor: pointer;
+}
+
+
+
+/*---------------------------------------------------------*/
+/*---------------------------------------------------------*/
+/*---------------------------------------------------------*/
+/*---------------------------------------------------------*/
+
+
+
+
+/*DESKTOP DE 768 EN ADELANTE*/
+
+@media (min-width: 768px) {
+
+/*SCROLLBAR DE TODO EL BODY*/
+
+body::-webkit-scrollbar {
+    width: 16px;
+}
+       
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px var(--aqua);
+}
+       
+body::-webkit-scrollbar-thumb {
+    background-color: var(--aqua);
+    border-radius: 10px;
+        
+}
+
+/*HEADER NAV BAR*/
+
+/*logo ubicacion*/
+
+.logo-container {
+    flex-direction: row;
+    order: 0;
+    gap: 8px;
+    
+}
+
+.logo {
+    height: clamp(3.5vw, 4vw, 3.5vw);
+    flex: 1 1 100%;
+
+}
+.nereidas {
+    height: clamp(0.8rem, 1.7vw, 1.3rem);
+    
+    flex: 1 1 100%;
+}
+
+/* NAV BAR*/
+
+.menu-toggle {
+    display: none;
+}
+
+.toggle {
+
+    
+    background-color: var(--white);
+    
+    flex-direction: row;
+    visibility: visible;
+    height: 48px;
+    width: fit-content;
+
+    position: static;
+
+    transition: none;
+    box-shadow: none;
+
+    opacity: 1;
+    pointer-events: all;
+    
+    gap: 16px;
+
+}
+
+.menu-toggle, .bars-container {
+    display: none;
+}
+
+
+.toggle li {
+
+    padding: 0px;
+
+    border-bottom: none;
+    margin: 0;
+
+    cursor: pointer;
+
+
+}
+
+.toggle li a {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+
+}
+
+
+.toggle li > i{
+    display: none;
+}
+
+.toggle li:hover > a, .toggle li:hover > i {
+    color: var(--aqua);
+    text-decoration:underline solid var(--aqua);
+    text-underline-offset: 3px;
+
+    transition: all 0.5s ease;
+
+}
+
+.toggle li:active > a, .toggle li:active > i {
+    color: var(--aqua);
+    transition: all 0.5s ease;
+
+}
+
+.menu-user-icono {
+    display: none;
+}
+
+/*BOTONES NAV BAR LOGIN SIGN IN*/
+
+.menu-button {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+
+    width: 30vw;
+    justify-content: end;
+}
+
+.menu-button li {
+    max-width: 130px;
+    flex: 1 0 100px;
+    
+}
+
+
+.menu-button li button {
+    padding: 16px;
+
+    height: 48px;
+
+    font-size: clamp(.5rem, 1.5vw, 1rem);
+    width: auto;
+
+    background: #F1F5F9;
+
+
+    box-shadow: 4px 4px 16px #C9D9E8;
+    border-radius: 15px;
+    border:none;
+}
+
+.menu-button li > .button-login {
+    background-color: var(--blue);
+
+
+}
+
+.menu-button li button:hover {
+    box-shadow: 4px 4px 16px #AAAAAA;
+    border-radius: 15px;
+
+    cursor: pointer;
+}
+.menu-button li button:active {
+    box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.25), inset 0px -2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+
+.button-login a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--blue);
+
+
+}
+
+.button-signin a {
+    text-decoration: none;
+    color: var(--blue);
+}
+
+/*HERO*/
+
+.hero-title {
+    padding: 0 72px;
+    width: 80%;
+}
+
+.hero-title h2 {
+    width: 100%;
+}
+
+.destinos-container, .barcos-container, 
+.servicios-container, .ofertas-container, .contacto-container {
+    padding: 0 72px;
+}
+
+
+/*DESTINOS*/
+
+.destinos-galeria-container {
+    display: flex;
+    flex-flow: row-reverse;
+}
+
+.destino-tres-items {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.destino-dos-items {
+    height: 50%;
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.mediterraneo {
+    background-image: url(assets/noruega.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30%;
+    height: 100%;
+}
+.noruega {
+    background-image: url(assets/mediterraneo.jpg);
+    height: 50%;
+}
+
+.japon, .caribe {
+    height: 100%;
+}
+
+.noruega a:last-child, .mediterraneo a:last-child {
+    display:block;
+}
+.noruega a:first-child, .mediterraneo a:first-child {
+    display:none;
+}
+
+/*HOVERS CARDS DESTINOS*/
+
+.destino-item {
+    background-size: 250%;
+
+    transition: background-size 0.3s ease;
+
+    font-size: 36x;
+
+}
+.destino-item a {
+
+    font-size: 36x;
+
+}
+
+.destino-item:hover {
+    background-size: 300%;
+    transition: background-size 0.3s ease;
+
+}
+
+
+/*BARCOS*/
+
+.barco-item-container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    width: 100%;
+
+    gap: 48px;
+}
+
+.barco-contenido {
+    width: 60%;
+}
+
+.barco-image {
+    width: 40%;
+}
+
+.excepcion-barco {
+    flex-direction: row-reverse;
+}
+
+
+/*SERVICIOS*/
+
+.servicio-imagen h3 {
+    display: none;
+
+}
+.servicios-descripcion {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 29px;
+    
+    color: #000000;
+}
+
+.servicios-descripcion h3{
+    height: 36px;
+}
+.servicios-descripcion p{
+
+    font-weight: 400;
+    text-align: justify;
+
+}
+
+.servicio-card-container {
+    flex: 1 1 300px;
+}
+
+
+
+.coleccion-cards {
+    flex-direction: row;
+
+    gap: 48px;
+}
+
+/*OFERTAS*/
+
+.ofertas-cards-container {
+    justify-content: space-between;
+}
+
+/*CONTACTO*/
+
+.form-datos {
+    flex-direction: row;
+    
+    align-items: center;
+
+    flex-wrap: wrap;
+
+}
+
+.form-datos > div {
+    flex: 1 1 424px;
+}
+
+.textfield {
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.mensaje {
+    width:100%;
+}
+
+.contacto-form-container form > button {
+    width: 200px;
+}
+
+.datos-uno {
+    width: auto;
+}
+.datos-uno .textfield, .desktop label, .desktop div {
+    width: 50%;
+}
+
+.desktop div > label {
+    width: 100%;
+}
+
+
+.desktop {
+    flex-direction: row;
+    gap: 24px;
+}
+
+/*FOOTER*/
+
+.footer-index {
+    padding: 28px 72px;
+
+}
+
+.footer-info {
+    flex-direction: row;
+
+    align-items: flex-start;
+}
+
+.info-columna-container{
+    display: flex;
+    flex-direction: column;
+    
+    height: auto;
+
+    border:none;
+
+    gap: 24px;
+}
+
+.info-columna-container{
+    display: flex;
+    flex-direction: column;
+    
+    height: auto;
+
+    padding: 0;
+}
+.info-columna-container h4{
+    height:56px;
+
+    padding: 0; 
+
+    cursor: default;
+
+    text-decoration: underline solid var(--blue) 3px;
+    text-underline-offset: 8px;
+
+    display: flex;
+    align-items: start;
+
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+
+}
+.info-columna-container h4 > i {
+   display: none;
+
+}
+
+.info-columna-container ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+
+    gap: 8px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+
+    color: #000000;
+
+    font-size: clamp(0.8rem, 1.5vw, 1.1rem);
+
+}
+.info-columna-container ul li:hover{
+    color: var(--aqua);
+    cursor: pointer;
+
+}
+
+.download {
+    padding: 0;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+}
+.download > div {
+    width: 100%;
+    height: 10vh;    
+
+    flex: none;
+
+    background-position: left;
+
+    cursor: pointer;
+}
+
+.redes i:hover{
+    color: var(--aqua);
+}
+
+}
